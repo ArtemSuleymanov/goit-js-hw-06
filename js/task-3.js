@@ -10,7 +10,27 @@
 // роботи. У консоль будуть виведені результати їх роботи. Будь ласка, нічого там не змінюй.
 
 class StringBuilder{
-    
+    #value
+
+    constructor(initialValue){
+        this.#value = initialValue;
+    }
+
+    getValue(){
+        return this.#value;
+    }
+
+    padEnd(str){
+        return this.#value += str;
+    }
+
+    padStart(str){
+        return this.#value = str += this.#value;
+    }
+
+    padBoth(str){
+        return this.#value = str.concat(this.#value, str);
+    }
 }
 
 const builder = new StringBuilder(".");
